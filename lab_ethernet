@@ -1,0 +1,56 @@
+1. Qual é o endereço Ethernet (48 bits) da sua máquina?
+
+d0:94:66:d5:ac:06
+
+2. Qual é o endereço de destino (48 bits) no quadro Ethernet que contém a requisição
+HTTP GET? Este é o endereço Ethernet de gaia.cs.umass.edu? Se não, a que
+dispositivo corresponde este endereço?
+
+00:0c:29:ae:ad:cf
+
+Não, é o endereço MAC do Gateway da rede privada
+
+3. Qual o valor hexadecimal do campo de dois bytes Frame type (tipo do quadro) no
+quadro Ethernet que carrega a requisição HTTP GET? A que protocolo de camada
+superior isto corresponde?
+
+0x8864. PPPoE Session
+
+4. A partir do início do quadro Ethernet (não contar preâmbulo), a quantos bytes
+aparece a letra ASCII “G” de "GET"no conteúdo do quadro?
+
+66o byte sem preâmbulo
+
+5. Qual o valor do endereço Ethernet de origem neste quadro? Este é o endereço da
+sua máquina ou de gaia.cs.umass.edu? A que dispositivo corresponde?
+
+00:0c:29:ae:ad:cf. Gateway da rede privada
+
+6. Qual é o endereço de destino no quadro Ethernet? Este é o endereço Ethernet da
+sua máquina?
+
+d0:94:66:d5:ac:06. Sim
+
+7. Qual o valor hexadecimal do campo de dois bytes Frame type neste quadro? Que
+protocolo de camada superior isto indica?
+
+0x8864. PPPoE Session
+
+8. A quantos bytes do início do quadro Ethernet aparece a letra ASCII “O” da resposta
+"OK"(código HTTP)?
+
+A resposta não 200 OK, mas sim 301 Moved Permamently
+
+9. Quantos quadros Ethernet (cada um contendo um datagrama IP com segmento
+TCP) transportam dados que pertencem à resposta HTTP "OK 200 ..."completa?
+
+2 (1 para request e 1 para response)
+
+11. Quantas entradas estão armazenadas no cache ARP da sua máquina?
+
+4
+
+12. O que é exibido em cada entrada mostrada pelo comando arp -a?
+
+| ip | mac address | protocol | network card |
+

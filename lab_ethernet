@@ -54,3 +54,69 @@ TCP) transportam dados que pertencem à resposta HTTP "OK 200 ..."completa?
 
 | ip | mac address | protocol | network card |
 
+### A partir daqui foi feito em outro lugar...
+
+12'. Qual é o valor hexadecimal do endereço de origem no quadro Ethernet que contém
+a requisição ARP enviada pela sua máquina?
+
+74:fe:ce:ed:ca:38
+
+13. Qual é o valor hexadecimal do endereço de destino no quadro Ethernet que contém
+a requisição ARP? A que dispositivo corresponde este endereço (cliente, servidor,
+roteador, switch, broadcast, etc.)?
+
+ff:ff:ff:ff:ff:ff. Broadcast
+
+14. Qual o valor hexadecimal do campo de dois bytes Frame type neste quadro? A que
+protocolo de camada superior isto corresponde?
+
+0x0806. ARP
+
+15. A partir do início do quadro Ethernet, a quantos bytes começa o campo opcode da
+mensagem ARP?
+
+- ARP começa no byte 14
+- Opcode começa no byte 20
+- 6 bytes
+
+16. Qual é o valor do campo opcode na requisição ARP enviada pela sua máquina?
+
+0x0001 (request)
+
+17. A requisição ARP contém o endereço IP do remetente? Se sim, qual é esse valor?
+
+Sim. 192.168.70.1
+
+18. Qual é o endereço IP cujo correspondente endereço Ethernet está sendo solicitado
+na requisição ARP da sua máquina?
+
+192.168.70.4
+
+19. Qual é o valor do campo opcode na mensagem de resposta ARP recebida pela sua
+máquina?
+
+0x0002 (reply)
+
+20. Qual é o endereço Ethernet correspondente ao endereço IP que foi solicitado na
+requisição ARP (resposta obtida)?
+
+3c:7c:3f:3b:93:4c
+
+# Discussão adicional
+
+21. No traço de captura podem existir requisições ARP originadas por outros disposi-
+tivos da rede. Por que não vemos respostas ARP para essas requisições no nosso traço? Explique.
+
+(???)
+
+# Exercícios Complementares
+
+EX-1. O comando arp -s InetAddr EtherAddr permite inserir manualmente entradas
+estáticas no cache ARP. O que ocorreria se fosse inserido o IP correto, porém o
+endereço Ethernet incorreto? (Pista: considere ataques de segurança conhecidos
+como ARP poisoning ou ARP spoofing.)
+
+EX-2. Qual é o tempo padrão que uma entrada permanece na sua cache ARP antes de
+expirar? Determine-o empiricamente ou consultando a documentação do sistema
+operacional e indique como obteve o valor.
+
